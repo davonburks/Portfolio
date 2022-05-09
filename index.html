@@ -9,40 +9,43 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="" id="logo">Davon Burks</a>
-            <div class="nav-menu">
-                <a href="">About</a>
-                <a href="">work</a>
-                <a href="">contact</a>
-            </div>
+                <a href="#" id="logo">Davon Burks</a>
+        <nav id="navbar">    
+            <ul>
+                <li class="nav-links"><a href="#About">About</a></li>
+                <li class="nav-links"><a href="#Work">Work</a></li>
+                <li class="nav-links"><a href="#Contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <section>
-            <div class="container">
-                <h1>I am a Front-End Engineer</h1>
-                <button>More about me</button>
-                <button>My work</button>
+        <section  class="section-container">
+            <div id="hero-section">
+                <h1 id="hero-header-text">I am a Front-End Engineer</h1>
+                <div id="hero-buttons">
+                    <button class="hero-btn">More about me</button>
+                    <button class="hero-btn">My work</button>
+                </div>
             </div>
         </section>
-        <section>
+        <section id="About">
             <div class="section-header">
                 <h2 class="section-title">About Me</h2>
             </div>
-            <div class="section-container">
-                <div class="about-card">
-                    <p class="about-card-title">Biography</p>
-                    <p>My name is Davon Burks and I am from Riverdale, Ga. I am college graduate from Georgia Southern University. I am a highly motivated person with an entrepreneurial spirit at heart.</p>
-                </div>
-                <div class="about-card">
-                    <p class="about-card-title">Education</p>
-                    <p>GRADUATED FROM GEORGIA SOUTHERN UNIVERISTY WITH BACHLORS OF SCIENCE IN INFORMATION TECHNOLOGY</p>
-                </div>
-                <div class="about-card">
-                    <p class="about-card-title">Expierence</p>
-                    <p>Freelance Web Developer- 2019-Present <br> Stylist-solutions- Webmaster - 2018-2018</p>
-                </div>
+                <div id="about-section-cards">
+                        <div class="about-card">
+                            <p class="about-card-title">Biography</p>
+                            <p class="about-card-text">My name is Davon Burks and I am from Riverdale, Ga. I am college graduate from Georgia Southern University. I am a highly motivated person with an entrepreneurial spirit at heart.</p>
+                        </div>
+                        <div class="about-card">
+                            <p class="about-card-title">Education</p>
+                            <p class="about-card-text">GRADUATED FROM<strong> GEORGIA SOUTHERN UNIVERISTY</strong> WITH BACHLORS OF SCIENCE IN INFORMATION TECHNOLOGY</p>
+                        </div>
+                        <div class="about-card">
+                            <p class="about-card-title">Expierence</p>
+                            <p class="about-card-text">Freelance Web <br>Developer- 2019-Present <br><br> Stylist-solutions- <br>Webmaster - 2018-2018</p>
+                        </div>
+                    </div>
                 <div class="about-card-full">
                     <p class="about-card-title">Skills</p>
                     <ul class="about-card-full-list">
@@ -71,7 +74,6 @@
                         <li>Codepen</li>
                     </ul>
                 </div>
-            </div>
         </section>
         <section class="section-container">
                 <div class="section-header">
