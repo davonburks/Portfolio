@@ -1,15 +1,166 @@
 * {
     top: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+/* Color Varibles */
+$primary-color-blue : #001021;
+$primary-color-blue-light : #001934;
+$secondary-color-green: #022F2F;
+$secondary-color-green-light: #023939;
+$secondary-color-green-lightest: #034748;
+
+/* Font Styles */
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Raleway:wght@400;700;900&display=swap');
+$header-font: 'Monoton', cursive;
+$paragraph-font: 'Raleway', sans-serif;
+
+body {
+    font-family: $paragraph-font;
+}
+header {
+    background-color: $primary-color-blue;
+    padding: 15px;
+    text-transform: uppercase;
+    font-family: $paragraph-font;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a:visited,  a:link {
+        text-decoration: none;
+        color: white;
+    }
+    #logo {
+        font-weight: 900;
+        display: flex;
+    }
+
+    #navbar {
+        display: flex;
+        text-decoration: none;
+        font-family: $paragraph-font;
+        list-style-type: none;
+        margin-right: 15px;
+    
+        .nav-links {
+            display: inline-block;
+            padding-right: 20px;
+        }
+        
+    }
 }
 
-nav {
+main {
+
+    #hero-section {
+    background-color: $secondary-color-green;
+    background-image: linear-gradient($primary-color-blue, $secondary-color-green);
+    height: 1100px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     align-items: center;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-.nav-menu {
-    justify-content: flex-end;
+    }
+    #hero-header-text {
+        font-family: $header-font;
+        font-size: 80px;
+        color: white;
+        letter-spacing: 6%;
+        text-transform: uppercase;
+    }
+    #hero-buttons {
+      display: grid;  
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 30px;
+    }
+        .hero-btn {
+            border: $secondary-color-green-lightest solid 5px;
+            padding: 20px 70px;
+            border-radius: 10px;
+            background-color: transparent;
+            color: white;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+    #About {
+        background-color: $secondary-color-green;
+        background-image: linear-gradient($secondary-color-green, $secondary-color-green-lightest);
+        height: 1000px;
+        padding: 50px 100px;
+        
+        .section-header {
+            font-family: $header-font;
+            text-align: center;
+            font-size: 250x;
+            text-decoration: underline  5px white;
+            text-transform: uppercase;
+            text-underline-offset: 10px;
+            color: white;
+            margin-bottom: 100px;
+
+        }
+        #about-section-cards {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+            align-items: center;
+            
+            
+        }
+        .about-card {
+            display: grid;
+            grid-area: 1fr 1fr 1fr;
+            text-align: center;
+            background-color: $primary-color-blue;
+            height: 300px;
+            width: 100%;
+            margin-right: 150px;
+            color: white;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 10px;
+        }   
+                .about-card-title {
+                    
+                    font-weight: bold;
+                    background-color: $secondary-color-green-lightest;
+                    padding: 20px;
+                    border-radius: 0px 0px 10px 10px;
+
+            }
+                .about-card-text {
+                    padding: 50px;
+                    
+            }
+    }       .about-card-full {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: $primary-color-blue;
+            height: 200px;
+            width: 100%;
+            margin-right: 150px;
+            color: white;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 10px;
+
+        }       
+                .about-card-full-title {
+                    margin-bottom: 10px;
+                    font-weight: bold;
+                    background-color: $secondary-color-green-lightest;
+                    padding: 25px;
+                    border-radius: 0px 0px 10px 10px;
+            }
+                .about-card-full-list {
+                    list-style-type: none;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    align-content: center;
+                }
+
 }
