@@ -83,6 +83,7 @@ header #navbar .nav-links {
   color: white;
   letter-spacing: 6%;
   text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
 #hero-buttons {
@@ -114,7 +115,7 @@ header #navbar .nav-links {
 #About .section-header {
   font-family: "Monoton", cursive;
   text-align: center;
-  font-size: 250x;
+  font-size: 40px;
   -webkit-text-decoration: underline  5px white;
           text-decoration: underline  5px white;
   text-transform: uppercase;
@@ -195,14 +196,14 @@ header #navbar .nav-links {
   background-color: #022F2F;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#034748), to(#023939));
   background-image: linear-gradient(#034748, #023939);
-  height: 1000px;
+  height: 1500px;
   padding: 50px 100px;
 }
 
 #Work .section-header {
   font-family: "Monoton", cursive;
   text-align: center;
-  font-size: 250x;
+  font-size: 40px;
   -webkit-text-decoration: underline  5px white;
           text-decoration: underline  5px white;
   text-transform: uppercase;
@@ -216,29 +217,64 @@ header #navbar .nav-links {
   color: white;
   text-transform: uppercase;
   border-radius: 10px 10px;
+  height: 310px;
+  width: auto;
+  overflow: hidden;
 }
 
 #Work .work-card-full-body {
-  padding: 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: 70px 85px 55px 60px 40px;
+      grid-template-rows: 70px 85px 55px 60px 40px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
 #Work .work-card-full-img {
-  height: 100%;
+  height: 20px;
+  width: auto;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 2 / span 3 / 3;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
 }
 
 #Work .work-card-full-title {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 35px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding-left: 30px;
+  padding-top: 50px;
 }
 
 #Work .work-card-full-desc {
-  font-size: 20px;
+  font-size: 25px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  padding-left: 30px;
+  padding-top: 30px;
+  width: 800px;
+  line-height: 30px;
 }
 
 #Work .work-card-full-btn {
@@ -249,6 +285,15 @@ header #navbar .nav-links {
   border-radius: 20px;
   background-color: #000912;
   color: white;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 1 / 4 / 2;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  width: 250px;
 }
 
 #Work .work-card-full-skills {
@@ -256,11 +301,192 @@ header #navbar .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: #001934;
   padding: 15px;
   font-style: italic;
+  margin: 0px;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: 5 / 1 / 6 / 3;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
+  padding: 10px;
+}
+
+#Work .work-card-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 35px 100px;
+}
+
+#Work .work-card {
+  background-color: #001021;
+  height: 260px;
+  width: 100%;
+  color: white;
+  border-radius: 10px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+#Work .work-card .work-card-body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  -ms-grid-rows: 30px 50px 60px;
+      grid-template-rows: 30px 50px 60px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  padding: 40px;
+}
+
+#Work .work-card .work-card-title {
+  font-weight: bold;
+  font-size: 20px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+#Work .work-card .work-card-desc {
+  font-size: 12px;
+  width: 400px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+#Work .work-card .work-card-button, #Work .work-card .work-card-button a {
+  font-weight: bold;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  background-color: #000912;
+  color: white;
+  width: 250px;
+  height: 50px;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 3 / 1 / 4 / 2;
+  text-decoration: none;
+}
+
+#Work .work-card .fa-desktop, #Work .work-card .fa-pen, #Work .work-card .fa-envelope {
+  font-size: 80px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+#Work .work-card .work-card-skills {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #001934;
+  padding: 10px;
+  margin: 0px;
+}
+
+#Contact {
+  background-color: #022F2F;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#023939), to(#001021));
+  background-image: linear-gradient(#023939, #001021);
+  height: 700px;
+  padding: 50px 100px;
+}
+
+#Contact .section-header {
+  font-family: "Monoton", cursive;
+  text-align: center;
+  font-size: 40px;
+  -webkit-text-decoration: underline  5px white;
+          text-decoration: underline  5px white;
+  text-transform: uppercase;
+  text-underline-offset: 10px;
+  color: white;
+  margin-bottom: 100px;
+}
+
+#Contact .contact-btn-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px 400px;
+}
+
+#Contact .contact-btn-list .contact-btn {
+  padding: 25px;
+  margin: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10fr;
+      grid-template-columns: 1fr 10fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  background-color: #034748;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+}
+
+#Contact .contact-btn-list .fa-envelope-open-text, #Contact .contact-btn-list .fa-linkedin, #Contact .contact-btn-list .fa-github {
+  font-size: 40px;
+}
+
+#footer {
+  background-color: #001021;
+  height: 150px;
+  color: white;
+  font-family: "Monoton", cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
