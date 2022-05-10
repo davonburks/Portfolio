@@ -6,6 +6,7 @@
 /* Color Varibles */
 $primary-color-blue : #001021;
 $primary-color-blue-light : #001934;
+$primary-color-blue-dark: #000912;
 $secondary-color-green: #022F2F;
 $secondary-color-green-light: #023939;
 $secondary-color-green-lightest: #034748;
@@ -101,21 +102,15 @@ header {
 
         }
         #about-section-cards {
-            display: flex;
-            justify-content: space-around;
-            align-content: center;
-            align-items: center;
-            
-            
+            display: grid;
+            grid-template-columns: 450px 450px 450px;
+            justify-content: space-between;
         }
         .about-card {
-            display: grid;
-            grid-area: 1fr 1fr 1fr;
+            
             text-align: center;
             background-color: $primary-color-blue;
             height: 300px;
-            width: 100%;
-            margin-right: 150px;
             color: white;
             font-size: 16px;
             text-transform: uppercase;
@@ -138,13 +133,13 @@ header {
             flex-direction: column;
             text-align: center;
             background-color: $primary-color-blue;
-            height: 200px;
+            height: 160px;
             width: 100%;
-            margin-right: 150px;
             color: white;
             font-size: 16px;
             text-transform: uppercase;
             border-radius: 10px;
+            margin-top: 50px;
 
         }       
                 .about-card-full-title {
@@ -153,10 +148,73 @@ header {
                     background-color: $secondary-color-green-lightest;
                     padding: 25px;
                     border-radius: 0px 0px 10px 10px;
+                 
             }
                 .about-card-full-list {
                     list-style-type: none;
                     display: flex;
                     justify-content: space-around;
+                    margin-top: 30px;
                 }
 
+
+
+
+#Work {
+        background-color: $secondary-color-green;
+        background-image: linear-gradient($secondary-color-green-lightest, $secondary-color-green-light);
+        height: 1000px;
+        padding: 50px 100px;
+
+    .section-header {
+        font-family: $header-font;
+        text-align: center;
+        font-size: 250x;
+        text-decoration: underline  5px white;
+        text-transform: uppercase;
+        text-underline-offset: 10px;
+        color: white;
+        margin-bottom: 100px
+    }
+    .work-card-full {
+        background-color: $primary-color-blue;
+        color: white;
+        text-transform: uppercase;
+        border-radius: 10px 10px;
+    }
+        .work-card-full-body {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+
+        }
+        .work-card-full-img {
+            height: 100%;
+        }
+
+        .work-card-full-title {
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .work-card-full-desc {
+            font-size: 20px;
+        }
+        .work-card-full-btn {
+            font-weight: bold;
+            padding: 15px 30px;
+            margin: 5px;
+            border: none;
+            border-radius: 20px;
+            background-color: $primary-color-blue-dark;
+            color: white;
+        }
+        .work-card-full-skills {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            background-color: $primary-color-blue-light;
+            padding: 15px;
+            font-style: italic;
+        }
+}
