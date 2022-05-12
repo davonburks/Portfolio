@@ -14,38 +14,47 @@ html {
 /* Font Styles */
 body {
   font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-  background-color: #001021;
-  padding: 15px;
-  text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
+.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-header a:visited, header a:link {
-  text-decoration: none;
+  background-color: #001021;
   color: white;
+  font-family: "Raleway", sans-serif;
 }
 
-header #logo {
+@media (max-width: 550px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.navbar .brand-title {
   font-weight: 900;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 1rem;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin: .5rem;
 }
 
-header .toggle-button {
+.navbar .toggle-button {
   position: absolute;
   top: .75rem;
   right: 1rem;
@@ -61,39 +70,89 @@ header .toggle-button {
   height: 21px;
 }
 
-header .toggle-button .bar {
+@media (max-width: 550px) {
+  .navbar .toggle-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.navbar .toggle-button .bar {
   height: 3px;
   width: 100%;
   background-color: white;
   border-radius: 10px;
 }
 
-#navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-decoration: none;
-  font-family: "Raleway", sans-serif;
-  list-style-type: none;
-  margin-right: 15px;
+.navbar .nav-links {
+  height: 100%;
 }
 
-@media only screen and (max-width: 500px) {
-  #navbar {
-    font-size: 12px;
-    margin: 0px;
+@media (max-width: 550px) {
+  .navbar .nav-links {
+    display: none;
+    width: 100%;
   }
 }
 
-#navbar .toggle-button {
+.navbar .nav-links li {
+  list-style-type: none;
+}
+
+@media (max-width: 550px) {
+  .navbar .nav-links li {
+    text-align: center;
+  }
+}
+
+.navbar .nav-links li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+}
+
+@media (max-width: 550px) {
+  .navbar .nav-links li a {
+    padding: .5rem 1rem;
+  }
+}
+
+.navbar .nav-links li:hover {
+  background-color: #001934;
+}
+
+.navbar .nav-links ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
-#navbar .nav-links {
-  display: inline-block;
-  padding-right: 20px;
+@media (max-width: 550px) {
+  .navbar .nav-links ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar .nav-links ul .nav-links ul li {
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar .nav-links.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 #hero-section {
@@ -129,7 +188,7 @@ header .toggle-button .bar {
   font-family: 'Monoton';
   font-size: 80px;
   color: white;
-  letter-spacing: 6%;
+  letter-spacing: 6px;
   text-transform: uppercase;
   margin-bottom: 50px;
 }
@@ -159,6 +218,11 @@ header .toggle-button .bar {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+}
+
+#hero-buttons a:visited, #hero-buttons a:link {
+  text-decoration: none;
+  color: white;
 }
 
 .hero-btn {
