@@ -45,7 +45,30 @@ header #logo {
   font-size: 1rem;
 }
 
-header #navbar {
+header .toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+header .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,21 +79,21 @@ header #navbar {
 }
 
 @media only screen and (max-width: 500px) {
-  header #navbar {
+  #navbar {
     font-size: 12px;
     margin: 0px;
   }
 }
 
-header #navbar .nav-links {
-  display: inline-block;
-  padding-right: 20px;
+#navbar .toggle-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-@media only screen and (max-width: 600px) {
-  header #navbar .nav-links {
-    padding: 0px;
-  }
+#navbar .nav-links {
+  display: inline-block;
+  padding-right: 20px;
 }
 
 #hero-section {
@@ -98,7 +121,7 @@ header #navbar .nav-links {
 
 @media only screen and (max-width: 800px) {
   #hero-section {
-    height: 900px;
+    height: 800px;
   }
 }
 
@@ -146,6 +169,12 @@ header #navbar .nav-links {
   color: white;
   text-transform: uppercase;
   font-size: 1.5vw;
+}
+
+@media only screen and (max-width: 450px) {
+  .hero-btn {
+    font-size: 15px;
+  }
 }
 
 #About {
@@ -281,16 +310,16 @@ header #navbar .nav-links {
   padding: 50px 100px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1250px) {
   #Work {
     height: 2500px;
     padding: 50px 50px;
   }
 }
 
-@media only screen and (max-width: 1200px) and (max-width: 600px) {
+@media only screen and (max-width: 1250px) and (max-width: 600px) {
   #Work {
-    padding: 50px 0px;
+    padding: 50px 10px;
   }
 }
 
@@ -316,6 +345,12 @@ header #navbar .nav-links {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 450px) {
+  #Work .work-card-full {
+    height: 400px;
+  }
+}
+
 #Work .work-card-full-body {
   display: -ms-grid;
   display: grid;
@@ -329,7 +364,6 @@ header #navbar .nav-links {
 
 #Work .work-card-full-img {
   height: 20px;
-  width: auto;
   -ms-grid-row: 2;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
@@ -340,9 +374,25 @@ header #navbar .nav-links {
           order: 4;
 }
 
+@media only screen and (max-width: 450px) {
+  #Work .work-card-full-img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 1 / 1 / 2 / 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 #Work .work-card-full-title {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -355,8 +405,21 @@ header #navbar .nav-links {
   padding-top: 50px;
 }
 
+@media only screen and (max-width: 750px) {
+  #Work .work-card-full-title {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 750px) and (max-width: 450px) {
+  #Work .work-card-full-title {
+    font-size: 15px;
+    margin-top: 170px;
+  }
+}
+
 #Work .work-card-full-desc {
-  font-size: 25px;
+  font-size: 18px;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
@@ -367,8 +430,31 @@ header #navbar .nav-links {
           order: 2;
   padding-left: 30px;
   padding-top: 30px;
-  width: 800px;
-  line-height: 30px;
+  width: 80%;
+  line-height: 25px;
+}
+
+@media only screen and (max-width: 1040px) {
+  #Work .work-card-full-desc {
+    font-size: 15px;
+    width: 100%;
+    line-height: 25px;
+  }
+}
+
+@media only screen and (max-width: 1040px) and (max-width: 735px) {
+  #Work .work-card-full-desc {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media only screen and (max-width: 1040px) and (max-width: 735px) and (max-width: 450px) {
+  #Work .work-card-full-desc {
+    font-size: 10px;
+    margin-top: 150px;
+    width: 100%;
+  }
 }
 
 #Work .work-card-full-btn {
@@ -388,6 +474,23 @@ header #navbar .nav-links {
       -ms-flex-order: 3;
           order: 3;
   width: 250px;
+}
+
+@media only screen and (max-width: 950px) {
+  #Work .work-card-full-btn {
+    padding: 15px 20px;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 950px) and (max-width: 450px) {
+  #Work .work-card-full-btn {
+    font-size: 15px;
+    padding: 20px 0px;
+    font-size: 10px;
+    width: 180px;
+    margin-top: 150px;
+  }
 }
 
 #Work .work-card-full-skills {
@@ -412,6 +515,20 @@ header #navbar .nav-links {
   padding: 10px;
 }
 
+@media only screen and (max-width: 950px) {
+  #Work .work-card-full-skills {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 950px) and (max-width: 450px) {
+  #Work .work-card-full-skills {
+    font-size: 10px;
+    padding: 20px;
+    margin-top: 90px;
+  }
+}
+
 #Work .work-card-container {
   display: -ms-grid;
   display: grid;
@@ -422,7 +539,7 @@ header #navbar .nav-links {
   gap: 35px 100px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1250px) {
   #Work .work-card-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -438,6 +555,12 @@ header #navbar .nav-links {
   overflow: hidden;
 }
 
+@media only screen and (max-width: 450px) {
+  #Work .work-card {
+    height: 230px;
+  }
+}
+
 #Work .work-card .work-card-body {
   display: -ms-grid;
   display: grid;
@@ -450,14 +573,32 @@ header #navbar .nav-links {
   padding: 40px;
 }
 
+@media only screen and (max-width: 700px) {
+  #Work .work-card .work-card-body {
+    padding: 20px;
+  }
+}
+
 #Work .work-card .work-card-title {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 20px;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1 / 1 / 2 / 2;
+}
+
+@media only screen and (max-width: 630px) {
+  #Work .work-card .work-card-title {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 630px) and (max-width: 3840px) {
+  #Work .work-card .work-card-title {
+    font-size: 12px;
+  }
 }
 
 #Work .work-card .work-card-desc {
@@ -473,6 +614,12 @@ header #navbar .nav-links {
 @media only screen and (max-width: 600px) {
   #Work .work-card .work-card-desc {
     width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) and (max-width: 450px) {
+  #Work .work-card .work-card-desc {
+    width: 90%;
   }
 }
 
@@ -508,13 +655,27 @@ header #navbar .nav-links {
   }
 }
 
+@media only screen and (max-width: 600px) and (max-width: 550px) {
+  #Work .work-card .work-card-button, #Work .work-card .work-card-button a {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+}
+
 #Work .work-card .fa-desktop, #Work .work-card .fa-pen, #Work .work-card .fa-envelope {
-  font-size: 5vw;
+  font-size: 60px;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-area: 1 / 2 / 2 / 3;
+}
+
+@media only screen and (max-width: 730px) {
+  #Work .work-card .fa-desktop, #Work .work-card .fa-pen, #Work .work-card .fa-envelope {
+    font-size: 40px;
+    padding-top: 10px;
+  }
 }
 
 #Work .work-card .work-card-skills {
@@ -530,9 +691,16 @@ header #navbar .nav-links {
   margin: 0px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   #Work .work-card .work-card-skills {
-    font-size: 10px;
+    font-size: 12px;
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 700px) and (max-width: 450px) {
+  #Work .work-card .work-card-skills {
+    margin-top: 20px;
   }
 }
 
@@ -587,7 +755,7 @@ header #navbar .nav-links {
   text-transform: uppercase;
   background-color: #034748;
   color: white;
-  font-size: 3vw;
+  font-size: 2.5vw;
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
