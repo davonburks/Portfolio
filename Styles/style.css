@@ -406,7 +406,6 @@ body {
   border-radius: 10px 10px;
   height: 310px;
   width: auto;
-  font-family: "Raleway", sans-serif;
   overflow: hidden;
 }
 
@@ -523,13 +522,14 @@ body {
 }
 
 #Work .work-card-full-btn {
-  font-weight: bold;
+  font-family: "Raleway", sans-serif;
   padding: 15px 30px;
   margin: 5px;
   text-transform: uppercase;
   border: none;
   margin-left: 30px;
   border-radius: 20px;
+  font-size: 15px;
   background-color: #000912;
   color: white;
   -ms-grid-row: 3;
@@ -706,6 +706,7 @@ body {
   color: white;
   width: 250px;
   height: 50px;
+  font-size: 14px;
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
