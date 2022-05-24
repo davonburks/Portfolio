@@ -155,6 +155,9 @@ body {
         text-decoration: none;
         color: white;
     }
+    a:hover {
+        background-color: $secondary-color-green-lightest;
+    }
 
     }
         .hero-btn {

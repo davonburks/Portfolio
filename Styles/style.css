@@ -225,6 +225,10 @@ body {
   color: white;
 }
 
+#hero-buttons a:hover {
+  background-color: #034748;
+}
+
 .hero-btn {
   border: #034748 solid 5px;
   padding: 20px 70px;
